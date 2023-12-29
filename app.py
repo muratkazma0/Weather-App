@@ -29,7 +29,7 @@ def getWeather():
         name.config(text="CURRENT WEATHER")
 
         # weather ;
-        api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3649175bf3b1bec672e43064f167f922"
+        api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=api_keys"
 
         json_data = requests.get(api).json()
         condition = json_data['weather'][0]['main']
@@ -115,29 +115,8 @@ root.mainloop()
 
 
 
-#Kod Açıklaması ; 
 
-'''Bu Python programı, Tkinter kütüphanesi kullanılarak oluşturulmuş bir hava durumu uygulamasını temsil eder. İşlevselliği aşağıdaki adımlar üzerinden açıklanabilir:
 
-1. Kullanıcı arayüzü (GUI) oluşturuluyor:
-   - Şehir adını girmek için bir metin kutusu (Entry widget) bulunuyor.
-   - Hava durumu sorgusunu başlatmak için bir buton (Button widget) eklenmiş.
-   - Görsel unsurlar, resim dosyaları kullanılarak eklenmiş.
-
-2. Hava durumu bilgilerini almak için bir fonksiyon tanımlanmış (`getWeather`):
-   - Kullanıcının girdiği şehir adı, GeoPy kütüphanesi kullanılarak coğrafi koordinatlara çevriliyor.
-   - Coğrafi koordinatlar kullanılarak zaman dilimi (timezone) bilgisi alınıyor.
-   - OpenWeatherMap API kullanılarak hava durumu bilgileri çekiliyor.
-   - Alınan bilgiler kullanılarak GUI üzerinde çeşitli etiketlere (Label widget) bilgiler yazdırılıyor.
-
-3. Kullanıcı arayüzü elemanlarına resimler ve renkler eklenmiş:
-   - Arka plan resmi, şehir adı giriş kutusu, arama düğmesi ve hava durumu bilgilerinin gösterildiği etiketler renklendirilmiş ve düzenlenmiş.
-
-4. Hava durumu bilgileri, etiketler üzerinde görsel olarak temsil ediliyor:
-   - Sıcaklık, hava durumu durumu, rüzgar hızı, nem oranı, hava basıncı gibi bilgiler etiketlerde gösteriliyor.
-
-5. Program, kullanıcıdan şehir adı alarak, o şehirdeki güncel hava durumu bilgilerini çekip ekrana gösteriyor.
-
-Not: Programın düzgün çalışabilmesi için kullanıcıların OpenWeatherMap API'ye kayıt olmaları ve kendi API anahtarlarını kullanmaları gerekmektedir. Ayrıca, programın çalışabilmesi için kullanıcıların bilgisayarlarında Python yüklü olmalı ve kullanılan kütüphaneleri (`tkinter`, `geopy`, `timezonefinder`, `requests`, `pytz`) yüklemiş olmaları gerekmektedir.'''
+ 
 
 
